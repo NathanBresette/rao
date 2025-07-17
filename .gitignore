@@ -1,56 +1,96 @@
-/build/
-build_*/
-build-*/
-*-build/
-*_build/
-*-build-*/
-*_build_*/
-/run/
-qtcreator-build
+# macOS system files
 .DS_Store
-src/gwt/www/js/acesupport.js
-src/gwt/www/js/ace.js
-src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ace/acesupport.js
-src/gwt/src/org/rstudio/core/client/jsonrpc/json2.min.js
-src/gwt/www/js/json2.min.js
-src/gwt/tools/ace/
-src/gwt/tools/pdfjs/
-src/gwt/tools/xterm.js/
-src/gwt/.ant-targets-build.xml
-/src/gwt/.gwt/.gwt-log
-.Rproj.user
-.Rhistory
-.RData
-.Rprofile
-/src/gwt/bin.test/
-/src/gwt/gwt-unitCache/
-NEWS.html
-CONTRIBUTING.html
-CMakeLists.txt.user
-.idea/
 
-.vscode/*
-!.vscode/extensions.json
+# Build directories and artifacts
+/src/build-server/
+/src/build-*/
+/src/*/build/
+/src/*/build-*/
+/build/
+/build-*/
+/out/
+/dist/
+/bin/
+/lib/
 
-**/\.tern-port
-.#*
-*.autosave
-*~
-*swp
-.orig
-.vagrant
-tags
-*.tags
-GPATH
-GRTAGS
-GSYMS
-GTAGS
-TODO-INTERNAL
-*.pid
+# CMake build files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+build.ninja
+.ninja_log
+.ninja_deps
 
+# Ninja/Make build files
+Makefile
+
+# Compiled object files, static and shared libs, executables
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Dependency directories
+_deps/
+dependencies/common/node/
+dependencies/common/boost/
+dependencies/common/soci/
+dependencies/common/crashpad/
+dependencies/common/cef/
+dependencies/common/openssl/
+dependencies/common/yaml-cpp/
+dependencies/common/fmt/
+dependencies/common/gsl-lite/
+dependencies/common/rapidjson/
+dependencies/common/websocketpp/
+dependencies/common/hunspell/
+dependencies/common/zlib/
+dependencies/common/expected/
+
+# Downloaded files and archives
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.7z
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Node.js
 node_modules/
-src/node/desktop/src/types/user-state-schema.d.ts
-rstudio-automation-results.xml
+package-lock.json
+yarn.lock
 
-venv/
-.venv/
+# Python
+__pycache__/
+*.pyc
+
+# Java/Ant
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE/editor files
+.vscode/
+.idea/
+*.iml
+
+# Miscellaneous
+*.bak
+*.old
+*.orig
+*.rej
+
+# Ignore panmirror build output if present
+/src/gwt/www/js/panmirror/
