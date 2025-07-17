@@ -115,15 +115,15 @@ std::string interprocess_error_category::message(int ev) const
          message = "Out of resource error";
          break;
 
-      case lock_error:
+      case boost::interprocess::lock_error:
          message = "Lock error";
          break;
 
-      case sem_error:
+      case boost::interprocess::sem_error:
          message = "Sem error";
          break;
 
-      case mode_error:
+      case boost::interprocess::mode_error:
          message = "Mode error";
          break;
 

@@ -49,7 +49,7 @@
    }                                                                           \
    catch (const boost::thread_resource_error& e)                               \
    {                                                                           \
-      core::Error threadError(boost::thread_error::ec_from_exception(e),       \
+      core::Error threadError(rstudio_boost::thread_error::ec_from_exception(e),       \
                               ERROR_LOCATION);                                 \
       LOG_ERROR(threadError);                                                  \
    }                                                                           \
@@ -295,7 +295,7 @@ public:
       }
       catch(const thread_resource_error& e)
       {
-         Error waitError(boost::thread_error::ec_from_exception(e), ERROR_LOCATION);
+         Error waitError(rstudio_boost::thread_error::ec_from_exception(e), ERROR_LOCATION);
          LOG_ERROR(waitError);
          return false;
       }
