@@ -26,9 +26,9 @@
    <property name="gwt.xmx" value="-Xmx1536M"/>    <!-- set maximum Java heap size -->
    <property name="gwt.xss" value="-Xss16M"/>      <!-- set java thread stack size -->
 
-   <taskdef name="jscomp"
+   <taskdef name="jscompile"
             classname="com.google.javascript.jscomp.ant.CompileTask"
-            classpath="${tools.dir}/compiler/compiler.jar"/>
+            classpath="src/gwt/tools/compiler/compiler.jar"/>
 
    <!-- Configure path to GWT SDK -->
    <property name="gwt.sdk" value="${lib.dir}/gwt/gwt-rstudio"/>
@@ -64,7 +64,7 @@
    </path>
 
    <target name="ext">
-      <jscomp compilationLevel="simple" warning="default"
+      <jscompile compilationLevel="simple" warning="default"
               debug="false" output="${ace.bin}/acesupport.js">
 
           <externs dir="${src.dir}/../acesupport">
@@ -73,7 +73,7 @@
 
           <path refid="acesupport.sources"/>
 
-      </jscomp>
+      </jscompile>
    </target>
 
    <target name="acesupport" description="Compile (debugging) Ace support">
